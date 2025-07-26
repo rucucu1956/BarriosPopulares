@@ -1,92 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Barrios Populares de la Argentina</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background-color: #e91e63;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2rem;
-    }
-    main {
-      padding: 2rem;
-    }
-    .map-links {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .province-card {
-      background-color: #fff;
-      border-left: 8px solid #e91e63;
-      padding: 1rem;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      transition: transform 0.2s;
-    }
-    .province-card:hover {
-      transform: translateY(-5px);
-    }
-    .province-card h2 {
-      margin-top: 0;
-      font-size: 1.25rem;
-    }
-    .province-card a {
-      color: #2196f3;
-      font-weight: bold;
-      text-decoration: none;
-    }
-    .province-card a:hover {
-      text-decoration: underline;
-    }
-    .button-area {
-      text-align: center;
-      margin-top: 3rem;
-    }
-    .button-area a {
-      background-color: #4caf50;
-      color: white;
-      padding: 1rem 2rem;
-      border-radius: 6px;
-      font-size: 1.1rem;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .button-area a:hover {
-      background-color: #43a047;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barrios Populares</title>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-  <header>
-    <h1>Barrios Populares de la Argentina</h1>
-  </header>
-  <main>
-    <section class="map-links">
-      <div class="province-card">
+    <header>
+        <h1>Barrios Populares de Argentina</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="como-solucionar.html">¿Cómo solucionar?</a>
+        </nav>
+    </header>
+    <main>
         <h2>Ciudad Autónoma de Buenos Aires</h2>
-        <p><a href="https://www.google.com/maps/d/viewer?mid=1EVF80bpfvOsMFKDLTSAQN6CWc8VjeBU&ll=-34.63141317906157%2C-58.423895000000016&z=12" target="_blank">Ver mapa interactivo</a></p>
-      </div>
-      <div class="province-card">
+        <iframe src="https://www.google.com/maps/d/embed?mid=1EVF80bpfvOsMFKDLTSAQN6CWc8VjeBU" width="100%" height="480"></iframe>
+
         <h2>Municipio de San Isidro</h2>
-        <p><a href="https://www.google.com/maps/d/viewer?mid=1P6K6drW5DwX40kEtWpUz7uRDNXniF-Q&ll=-34.48780903894983%2C-58.5413205&z=13" target="_blank">Ver mapa interactivo</a></p>
-      </div>
-    </section>
-    <div class="button-area">
-      <a href="soluciones.html">¿Cómo solucionar el tema de los barrios populares?</a>
-    </div>
-  </main>
+        <iframe src="https://www.google.com/maps/d/embed?mid=1P6K6drW5DwX40kEtWpUz7uRDNXniF-Q" width="100%" height="480"></iframe>
+    </main>
+    <footer>
+        <p>&copy; 2025 Barrios Populares</p>
+    </footer>
 </body>
 </html>
