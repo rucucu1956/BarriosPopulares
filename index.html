@@ -1,45 +1,61 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barrios Populares</title>
-    <link rel="stylesheet" href="estilos.css">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Barrios Populares - Leaflet</title>
+<link rel="stylesheet" href="estilos.css" />
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+  integrity="sha256-sA+e2kGQjwib6X9SjLxEbdMJ8Q3KZgX2Tk1jML6cQQM="
+  crossorigin=""
+/>
 </head>
 <body>
-    <header>
-        <h1>Barrios Populares de Argentina</h1>
-        <nav>
-            <a href="index.html">Inicio</a>
-            <a href="como-solucionar.html">¿Cómo solucionar?</a>
-        </nav>
-    </header>
-    <main>
-        <h2>Ciudad Autónoma de Buenos Aires</h2>
-        <iframe
-            width="100%"
-            height="480"
-            frameborder="0"
-            style="border:0"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBr-EADmrrt2JhkRcFPGtOtXjQ6WFv1pqo&q=Ciudad+Autonoma+de+Buenos+Aires">
-        </iframe>
+<header>
+  <h1>Barrios Populares de Argentina</h1>
+  <nav>
+    <a href="index.html">Inicio</a>
+    <a href="como-solucionar.html">¿Cómo solucionar?</a>
+  </nav>
+</header>
+<main>
+  <h2>Ciudad Autónoma de Buenos Aires</h2>
+  <div id="map-caba"></div>
 
-        <h2>Municipio de San Isidro</h2>
-        <iframe
-            width="100%"
-            height="480"
-            frameborder="0"
-            style="border:0"
-            allowfullscreen
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBr-EADmrrt2JhkRcFPGtOtXjQ6WFv1pqo&q=San+Isidro+Buenos+Aires+Argentina">
-        </iframe>
-    </main>
-    <footer>
-        <p>&copy; 2025 Barrios Populares</p>
-    </footer>
+  <h2>Municipio de San Isidro</h2>
+  <div id="map-san-isidro"></div>
+</main>
+<footer>
+  <p>&copy; 2025 Barrios Populares</p>
+</footer>
+
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+  integrity="sha256-o8b8Vsqcp1wl64DxPRyLtOWj+Q3Q/Zp1bSnG2x0yxWQ="
+  crossorigin=""
+></script>
+<script>
+  // Mapa CABA
+  const mapCaba = L.map('map-caba').setView([-34.61, -58.44], 12);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(mapCaba);
+  L.marker([-34.61, -58.44])
+    .addTo(mapCaba)
+    .bindPopup('Ciudad Autónoma de Buenos Aires')
+    .openPopup();
+
+  // Mapa San Isidro
+  const mapSanIsidro = L.map('map-san-isidro').setView([-34.47, -58.51], 13);
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+  }).addTo(mapSanIsidro);
+  L.marker([-34.47, -58.51])
+    .addTo(mapSanIsidro)
+    .bindPopup('Municipio de San Isidro')
+    .openPopup();
+</script>
 </body>
 </html>
