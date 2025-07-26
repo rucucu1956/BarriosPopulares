@@ -3,41 +3,31 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f1f1f1;
 }
+
 header {
-    background-color: #c62828;
+    background-color: #004d40;
     color: white;
-    padding: 1rem;
+    padding: 1em;
     text-align: center;
 }
-nav {
-    margin-top: 1rem;
-}
+
 nav a {
-    margin: 0 1rem;
     color: white;
+    margin: 0 1em;
     text-decoration: none;
     font-weight: bold;
 }
-nav a:hover {
-    text-decoration: underline;
-}
+
 main {
-    padding: 2rem;
+    padding: 2em;
+    background-color: white;
 }
-h2 {
-    color: #c62828;
-    margin-top: 2rem;
-}
-iframe {
-    border: 2px solid #c62828;
-    border-radius: 8px;
-}
+
 footer {
-    background-color: #e0e0e0;
+    background-color: #004d40;
+    color: white;
     text-align: center;
-    padding: 1rem;
-    margin-top: 2rem;
+    padding: 1em;
 }
